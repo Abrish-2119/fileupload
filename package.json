@@ -40,7 +40,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start:prod": "node server.js"
+    "start:prod": "node server.js",
+    "vercel-build": "npm run build",
+    "postbuild": "echo 'Build completed successfully'"
   },
   "eslintConfig": {
     "extends": [

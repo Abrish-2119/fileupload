@@ -12,64 +12,52 @@ This will start:
 - Backend server on http://localhost:5000
 - Frontend on http://localhost:3001
 
-## Production Deployment Options
+## Production Deployment
 
-### Option 1: Netlify + Vercel (Recommended for React)
+### **Recommended: Vercel (Full Stack)**
 
-#### **Frontend to Netlify (Static Hosting)**
+Vercel is perfect for your File Upload System:
+- ✅ **Full Stack**: Frontend + Backend together
+- ✅ **Serverless**: No server management
+- ✅ **Global CDN**: Fast worldwide loading
+- ✅ **QR Code Friendly**: Perfect for mobile access
+- ✅ **20MB Upload**: Optimized for file handling
+- ✅ **Free SSL**: Automatic HTTPS
+
+### **Quick Deploy**
 ```bash
-# Install Netlify CLI
-npm install -g netlify-cli
-
-# Build React app
-npm run build
-
-# Deploy to Netlify
-netlify deploy --prod --dir=build
-
-# Or drag & drop build folder to:
-# https://app.netlify.com/drop
-```
-
-#### **Backend to Vercel (Serverless)**
-```bash
-# Deploy backend to Vercel
+# Install Vercel CLI
 npm install -g vercel
-cd server
+
+# Login to Vercel
+vercel login
+
+# Deploy your app
 vercel --prod
 ```
 
-#### **Update API Configuration**:
-```typescript
-// Update src/services/ApiService.ts
-const API_BASE_URL = process.env.NODE_ENV === 'production' 
-  ? 'https://your-backend-name.vercel.app/api'
-  : 'http://localhost:5000/api';
+### **Your Live URLs**
+```
+Main App: https://your-app-name.vercel.app/
+QR Access: https://your-app-name.vercel.app/qr-login
+Customer Login: https://your-app-name.vercel.app/login
+Admin Panel: https://your-app-name.vercel.app/admin-login
+File Upload: https://your-app-name.vercel.app/upload
 ```
 
-#### **Your Live URLs**:
-```
-Frontend: https://your-app-name.netlify.app/
-Backend: https://your-backend-name.vercel.app/api
-QR Access: https://your-app-name.netlify.app/qr-login
-```
-
-### Option 2: Vercel + MongoDB Atlas
-
-1. **Deploy Backend to Vercel**:
+### **Environment Variables**
 ```bash
-npm install -g vercel
-vercel --prod
+# Set MongoDB URI
+vercel env add MONGODB_URI
+
+# Set JWT Secret
+vercel env add JWT_SECRET
+
+# Set Production Mode
+vercel env add NODE_ENV production
 ```
 
-2. **Update API URLs** in `src/services/ApiService.ts`:
-```typescript
-const API_BASE_URL = process.env.NODE_ENV === 'production' 
-  ? 'https://your-backend-url.vercel.app/api' 
-  : 'http://localhost:5000/api';
-```
-
-### Option 3: Traditional VPS/Dedicated Server
+### **Alternative: Traditional VPS/Dedicated Server**
 
 1. **Build the app**:
 ```bash

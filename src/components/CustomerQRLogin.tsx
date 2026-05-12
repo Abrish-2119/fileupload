@@ -8,7 +8,6 @@ const CustomerQRLogin: React.FC = () => {
   const navigate = useNavigate();
   const [customerName, setCustomerName] = useState('');
   const [customerEmail, setCustomerEmail] = useState('');
-  const [showQR, setShowQR] = useState(false);
   const [currentUrl, setCurrentUrl] = useState('');
 
   useEffect(() => {

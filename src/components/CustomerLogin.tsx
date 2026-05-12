@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import ApiService, { Customer } from '../services/ApiService';
+import ApiService from '../services/ApiService';
 import './CustomerLogin.css';
 
 const CustomerLogin: React.FC = () => {

@@ -1,0 +1,143 @@
+/* File Icons Styling */
+.file-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  margin-right: 12px;
+}
+
+.file-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Image Icon */
+.file-icon.image-icon {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+/* PDF Icon */
+.file-icon.pdf-icon {
+  background: linear-gradient(135deg, #f5365c 0%, #f56036 100%);
+  color: white;
+}
+
+/* Word Document Icon */
+.file-icon.doc-icon {
+  background: linear-gradient(135deg, #2dce89 0%, #2dcecc 100%);
+  color: white;
+}
+
+/* Excel Icon */
+.file-icon.excel-icon {
+  background: linear-gradient(135deg, #11cdef 0%, #1171ef 100%);
+  color: white;
+}
+
+/* Text File Icon */
+.file-icon.text-icon {
+  background: linear-gradient(135deg, #8965e0 0%, #bc65e0 100%);
+  color: white;
+}
+
+/* Default File Icon */
+.file-icon.default-icon {
+  background: linear-gradient(135deg, #8898aa 0%, #525f7f 100%);
+  color: white;
+}
+
+/* File Info Styling */
+.file-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.file-name {
+  margin: 0 0 4px 0;
+  font-weight: 600;
+  font-size: 14px;
+  color: #32325d;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.file-meta {
+  margin: 0;
+  font-size: 12px;
+  color: #8898aa;
+  line-height: 1.4;
+}
+
+.customer-info {
+  margin: 4px 0 0 0;
+  font-size: 11px;
+  color: #525f7f;
+  font-weight: 500;
+}
+
+/* Uploaded File Card Styling */
+.uploaded-file-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.uploaded-file-icon svg {
+  width: 40px;
+  height: 40px;
+}
+
+/* Admin Dashboard File Card Styling */
+.admin-dashboard .file-card {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admin-dashboard .file-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.admin-dashboard .file-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.admin-dashboard .file-name {
+  margin: 0 0 8px 0;
+  font-weight: 600;
+  font-size: 16px;
+  color: #32325d;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.admin-dashboard .file-meta {
+  margin: 0 0 4px 0;
+  font-size: 14px;
+  color: #8898aa;
+  line-height: 1.4;
+}
+
+.admin-dashboard .customer-info {
+  margin: 0;
+  font-size: 12px;
+  color: #525f7f;
+  font-weight: 500;
+}

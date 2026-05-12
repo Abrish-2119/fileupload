@@ -1,0 +1,5 @@
+This is a sample text file for testing file upload functionality.
+It should upload correctly and download without corruption.
+
+Created: May 6, 2026
+Purpose: Test file upload/download system

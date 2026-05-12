@@ -42,19 +42,35 @@ class ApiService {
 
   // Customer registration/login
   async registerCustomer(name: string, email: string): Promise<Customer> {
-    const response = await fetch(`${API_BASE_URL}/customers`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ name, email }),
-    });
+    console.log('=== registerCustomer Started ===');
+    console.log('API_BASE_URL:', API_BASE_URL);
+    console.log('Request data:', { name, email });
+    
+    try {
+      const response = await fetch(`${API_BASE_URL}/customers`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, email }),
+      });
 
-    if (!response.ok) {
-      throw new Error('Failed to register customer');
+      console.log('Response status:', response.status);
+      console.log('Response ok:', response.ok);
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error('Response error:', errorText);
+        throw new Error(`Failed to register customer: ${response.status} ${errorText}`);
+      }
+
+      const customer = await response.json();
+      console.log('Customer registered:', customer);
+      return customer;
+    } catch (error) {
+      console.error('registerCustomer error:', error);
+      throw error;
     }
-
-    return response.json();
   }
 
   // File upload

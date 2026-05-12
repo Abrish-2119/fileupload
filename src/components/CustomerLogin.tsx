@@ -30,7 +30,8 @@ const CustomerLogin: React.FC = () => {
       navigate('/upload');
     } catch (error) {
       console.error('Login failed:', error);
-      alert('Login failed. Please try again.');
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred';
+      alert(`Login failed: ${errorMessage}. Please check your internet connection and try again.`);
     } finally {
       setIsLoading(false);
     }

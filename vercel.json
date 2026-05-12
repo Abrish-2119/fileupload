@@ -28,12 +28,7 @@
     "JWT_SECRET": "@jwt_secret",
     "NODE_ENV": "production"
   },
-  "functions": {
-    "server.js": {
-      "maxDuration": 10
-    }
-  },
-  "installCommand": "npm install",
+    "installCommand": "npm install",
   "buildCommand": "npm run build",
   "outputDirectory": "build"
 }

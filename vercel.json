@@ -23,12 +23,7 @@
       "dest": "/build/$1"
     }
   ],
-  "env": {
-    "MONGODB_URI": "@mongodb_uri",
-    "JWT_SECRET": "@jwt_secret",
-    "NODE_ENV": "production"
-  },
-    "installCommand": "npm install",
+      "installCommand": "npm install",
   "buildCommand": "npm run build",
   "outputDirectory": "build"
 }
